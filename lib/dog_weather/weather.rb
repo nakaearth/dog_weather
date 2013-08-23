@@ -10,12 +10,12 @@ module DogWeather
 
     def weather(lat, lon)
       res = Net::HTTP.get(@url, "/data/2.5/weather?lat=#{lat}&lon=#{lon}")
-      puts res 
+      puts res
     end
 
     def city(city_name)
       res = Net::HTTP.get(@url, "/data/2.5/weather?q=#{city_name}")
-      puts res 
+      puts res
     end
   end
 end
